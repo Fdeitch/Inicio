@@ -27,17 +27,18 @@ frame_corpo.grid(row=1, column=0)
 
 # criando função
 
-def calcular():
-    a = eval('9/9')
+def entrar_valores(event):
+    resultado = eval('9/9')
+    todos_valores = event
     
     # passando valor para a tela 
-    app_label.set(resultado)
+    valor_texto.set(todos_valores)
 
-calcular()
+
 
 # criando label
-
-app_label = Label(frame_tela, text='123456789', width=15, height=2, padx=7, relief=FLAT, anchor="e", justify=RIGHT, font=('Ivy 18 '), bg=cor3, fg=cor2)
+valor_texto = StringVar()
+app_label = Label(frame_tela, textvariable=valor_texto,text='123456789', width=15, height=2, padx=7, relief=FLAT, anchor="e", justify=RIGHT, font=('Ivy 18 '), bg=cor3, fg=cor2)
 app_label.place(x=0, y=0)
 
 
@@ -46,7 +47,7 @@ app_label.place(x=0, y=0)
 
 b_1 = Button(frame_corpo, text="C", width=8, height=2, bg=cor4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_1.place(x=0, y=0)
-b_2 = Button(frame_corpo, text="%", width=3, height=2, bg=cor4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
+b_2 = Button(frame_corpo, command=lambda: entrar_valores('%'), text="%", width=3, height=2, bg=cor4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_2.place(x=118, y=0)
 b_3 = Button(frame_corpo, text="/", width=3, height=2, bg=cor5, fg=cor2, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_3.place(x=177, y=0)
@@ -86,7 +87,6 @@ b_17 = Button(frame_corpo, text=".", width=3, height=2, bg=cor4, font=('Ivy 13 b
 b_17.place(x=118, y=208)
 b_18= Button(frame_corpo, text="=", width=3, height=2, bg=cor5, fg=cor2, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_18.place(x=177, y=208)
-
 
 
 
