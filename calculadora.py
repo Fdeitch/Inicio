@@ -25,6 +25,16 @@ frame_tela.grid(row=0, column=0)
 frame_corpo = Frame(janela, width=235, height=268)
 frame_corpo.grid(row=1, column=0)
 
+# criando função
+
+def calcular():
+    a = eval('9/9')
+    
+    # passando valor para a tela 
+    app_label.set(resultado)
+
+calcular()
+
 # criando label
 
 app_label = Label(frame_tela, text='123456789', width=15, height=2, padx=7, relief=FLAT, anchor="e", justify=RIGHT, font=('Ivy 18 '), bg=cor3, fg=cor2)
@@ -70,13 +80,12 @@ b_14.place(x=118, y=156)
 b_15 = Button(frame_corpo, text="+", width=3, height=2, bg=cor5, fg=cor2, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_15.place(x=177, y=156)
 
-b_1 = Button(frame_corpo, text="0", width=8, height=2, bg=cor4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
-b_1.place(x=0, y=208)
-b_2 = Button(frame_corpo, text=".", width=3, height=2, bg=cor4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
-b_2.place(x=118, y=208)
-b_3 = Button(frame_corpo, text="=", width=3, height=2, bg=cor5, fg=cor2, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
-b_3.place(x=177, y=208)
-
+b_16 = Button(frame_corpo, text="0", width=8, height=2, bg=cor4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
+b_16.place(x=0, y=208)
+b_17 = Button(frame_corpo, text=".", width=3, height=2, bg=cor4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
+b_17.place(x=118, y=208)
+b_18= Button(frame_corpo, text="=", width=3, height=2, bg=cor5, fg=cor2, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
+b_18.place(x=177, y=208)
 
 
 
