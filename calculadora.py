@@ -25,7 +25,7 @@ frame_tela.grid(row=0, column=0)
 frame_corpo = Frame(janela, width=235, height=268)
 frame_corpo.grid(row=1, column=0)
 
-# variavel todtext="9",os valores
+# variavel todos valores
 
 todos_valores = ''
 
