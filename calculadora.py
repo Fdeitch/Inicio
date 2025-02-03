@@ -25,8 +25,11 @@ frame_tela.grid(row=0, column=0)
 frame_corpo = Frame(janela, width=235, height=268)
 frame_corpo.grid(row=1, column=0)
 
-# criando função
+# variavel todtext="9",os valores
+
 todos_valores = ''
+
+# criando função
 def entrar_valores(event):
     global todos_valores
     
@@ -36,6 +39,20 @@ def entrar_valores(event):
     # passando valor para a tela 
     valor_texto.set(todos_valores)
 
+
+# função para calcular
+def calcular():
+    global todos_valores
+    resultado = eval(todos_valores)
+    valor_texto.set(str(resultado))
+    
+
+
+# função limpar tela
+def limpar_tela():
+    global todos_valores
+    todos_valores = ""
+    valor_texto.set("")
 
 
 # criando label
@@ -47,7 +64,7 @@ app_label.place(x=0, y=0)
 
 # criando botões
 
-b_1 = Button(frame_corpo, command=lambda: entrar_valores('C'), text="C", width=8, height=2, bg=cor4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
+b_1 = Button(frame_corpo, command=limpar_tela, text="C", width=8, height=2, bg=cor4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_1.place(x=0, y=0)
 b_2 = Button(frame_corpo, command=lambda: entrar_valores('%'), text="%", width=3, height=2, bg=cor4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_2.place(x=118, y=0)
@@ -87,7 +104,7 @@ b_16 = Button(frame_corpo, command=lambda: entrar_valores('0'), text="0", width=
 b_16.place(x=0, y=208)
 b_17 = Button(frame_corpo, command=lambda: entrar_valores('.'), text=".", width=3, height=2, bg=cor4, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_17.place(x=118, y=208)
-b_18= Button(frame_corpo, command=lambda: entrar_valores('='), text="=", width=3, height=2, bg=cor5, fg=cor2, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
+b_18= Button(frame_corpo, command=calcular, text="=", width=3, height=2, bg=cor5, fg=cor2, font=('Ivy 13 bold'), relief=RAISED, overrelief=RIDGE)
 b_18.place(x=177, y=208)
 
 
