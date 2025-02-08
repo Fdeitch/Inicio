@@ -1,10 +1,6 @@
-# Sistema de cadastro de jogos
-
-> Status do projeto: Em desenvolvimento
-
-Para rodar esse projeto em sua máquina por favor digite:
+Web Api's 
 
 ```
-node app.js
+
 ```
-:)
+
