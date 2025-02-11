@@ -1,4 +1,4 @@
-#!/home/fausto/Documents/Inicio/.venv/bin/python3
+#!/home/fausto/Documents/Start/.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
