@@ -6,25 +6,7 @@ import pandas as pd
 st.set_page_config(layout="wide")
 
 df_gols = pd.read_csv("APPWEB/campeonato-brasileiro-gols.csv")
-
-
-#df_gols.describe() # Estatísticas descritivas
-#df_gols.head(15)
 df_gols["minuto"] = pd.to_numeric(df_gols["minuto"], errors='coerce')
 above_74 = df_gols[df_gols["minuto"] > 74]
 above_74
 
-
-
-#price_max = df_gols["book price"].max()
-#price_min = df_gols["book price"].min()
-
-#max_price = st.sidebar.slider("Price Range", price_min, price_max, price_max)
-#df_books = df_top100_books[df_top100_books["book price"]<= max_price]
-#df_books
-#fig = px.bar(df_books["year of publication"].value_counts())
-#fig2 = px.histogram(df_books["book price"])
-
-#col1, col2 = st.columns(2)
-#col1.plotly_chart(fig)
-#col2.plotly_chart(fig2)
